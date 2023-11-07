@@ -37,6 +37,9 @@ function gridGenerator(number, appendClass) {
         const cell = document.createElement('div');
         cell.className = 'square ' + appendClass;
         cell.innerHTML = i + 1;
+        cell.addEventListener('click', () => {
+            cell.classList.toggle('highlighted');
+        })
         grid.appendChild(cell);
     }
 }
