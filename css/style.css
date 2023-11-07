@@ -3,3 +3,28 @@
     margin: 0;
     padding: 0;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+main {
+    background-color: aquamarine;
+    height: calc(100vh - 180px);
+    overflow: auto;
+}
+
+footer {
+    height: 80px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    height: fit-content;
+    align-items: center;
+}
+
