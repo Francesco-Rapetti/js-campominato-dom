@@ -26,12 +26,23 @@ playBtn.addEventListener('click', () => {
     }
 })
 
+/**
+ * Erases the content of a given div element.
+ *
+ * @param {HTMLElement} div - The div element to be cleared.
+ */
 function eraser(div) {
     if (div.firstChild) {
         div.innerHTML = '';
     }
 }
 
+/**
+ * Generates a grid of cells with the specified number and appends the given class to each cell.
+ *
+ * @param {number} number - The number of cells to generate.
+ * @param {string} appendClass - The class to append to each cell.
+ */
 function gridGenerator(number, appendClass) {
     for (let i = 0; i < number; i++) {
         const cell = document.createElement('div');
