@@ -44,7 +44,7 @@ function gridGenerator(number, appendClass) {
         cell.className = 'square ' + appendClass;
         cell.innerHTML = cellNumber;
         cell.addEventListener('click', () => {
-            if (game && safeTiles.includes(cellNumber) || bombs.includes(cellNumber)) {
+            if (game && (safeTiles.includes(cellNumber) || bombs.includes(cellNumber))) {
                 if (bombs.includes(cellNumber)) {
                     cell.classList.add('bomb');
                     endGame(false);
