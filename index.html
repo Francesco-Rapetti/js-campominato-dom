@@ -24,7 +24,19 @@
     </header>
 
     <main>
-        <div id="grid"></div>
+        <div id="score" class="position-absolute d-none">Score: [#]</div>
+        <div class="container-fluid justify-content-center align-items-center d-flex h-100">
+            <div id="grid"></div>
+        </div>
+
+        <div id="glass" class="position-absolute d-flex justify-content-center align-items-center text-center d-none">
+            <div>
+                <h1 id="endMessage">HAI VINTO/PERSO</h1>
+                <div id="endScore" class="mt-4">Score: [#]</div>
+                <div id="highScore">Highest Score: [#]</div>
+                <button id="restart" class="btn bg-primary text-white mt-5">Ricomincia</button>
+            </div>
+        </div>
     </main>
 
     <footer class="d-flex align-items-center ps-4">

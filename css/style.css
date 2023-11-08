@@ -15,9 +15,6 @@ main {
     background-color: aquamarine;
     height: calc(100vh - 180px);
     overflow: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 footer {
@@ -64,6 +61,23 @@ footer {
 .square.highlighted {
     background-color: #0d6efd;
     color: white;
+}
+
+.square.bomb {
+    background-color: red;
+}
+
+#glass {
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.2px);
+    -webkit-backdrop-filter: blur(16.2px);
+    top: calc(50% - 250px);
+    left: calc(50% - 40%);
+    width: 80%;
+    height: 500px;
+
 }
 
 
