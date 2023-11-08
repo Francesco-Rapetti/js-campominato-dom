@@ -57,7 +57,6 @@ function gridGenerator(number, appendClass) {
                     }
                     const index = safeTiles.indexOf(cellNumber);
                     safeTiles.splice(index, 1);
-                    console.log(safeTiles)
                 }
             }
         })
@@ -80,7 +79,7 @@ function bombArrayGenerator(maxLength) {
         }
         output.push(element);
     }
-    console.log(output);
+    console.log("bombs: " + output);
     return output;
 }
 
@@ -132,33 +131,35 @@ function newGame() {
     eraser(grid);
     switch (difficulty.value) {
         case 'easy':
-            console.log('easy');
             gridGenerator(easy, 'easy');
             bombs = bombArrayGenerator(easy);
             safeTiles = safeTilesGenerator(easy, bombs);
             maxScore = easy - 16;
             break;
         case 'medium':
-            console.log('medium');
             gridGenerator(medium, 'medium');
             bombs = bombArrayGenerator(medium);
             safeTiles = safeTilesGenerator(medium, bombs);
             maxScore = medium - 16;
             break;
         case 'hard':
-            console.log('hard');
             gridGenerator(hard, 'hard');
             bombs = bombArrayGenerator(hard);
             safeTiles = safeTilesGenerator(hard, bombs);
             maxScore = hard - 16;
             break;
-        default:
-            console.log('default');
-            break;
+        default: break;
     }
-    console.log('cheat: ' + safeTiles);
+    // console.log('cheat: ' + safeTiles);
 }
 
+/**
+ * Generates an array of safe tiles based on a given number and an array of tiles to exclude.
+ *
+ * @param {number} number - The total number of tiles.
+ * @param {Array} arrayToExclude - An array of tiles to exclude from the output.
+ * @return {Array} - An array of safe tiles.
+ */
 function safeTilesGenerator(number, arrayToExclude) {
     let output = [];
     for (let i = 1; i <= number; i++) {
